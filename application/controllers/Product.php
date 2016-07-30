@@ -34,4 +34,11 @@ class Product extends CI_Controller {
 		$this->load->view('productDetail', $data);
 		$this->load->view('templates/footer', $data);
 	}
+
+	public function setProductCount()
+	{
+		$count = $this->input->post('count');
+		$this->session->set_userdata(array('show_item_count' => $count));
+		return true;
+	}		
 }

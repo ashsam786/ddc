@@ -1071,5 +1071,16 @@ $(document).mouseup(function (e) {
     });
 
 
+$('.selectItemCount').next('.sbHolder').find('.sbOptions').find('li a').on('click', function(e){
+    var count = $(this).html();
+    $.ajax({
+      type: "POST",
+      url: location.protocol+'//'+location.host+'/product/setProductCount/'+count,
+      data: {'count': count},
+      success: function(data){
+        location.reload();
+      }
+    });
+});
 
 });

@@ -74,7 +74,7 @@ New York, NY 10036</p>
     
                   <ul>
 
-                    <li><a href="<?php echo base_url('jewellery'); ?>">Jewellery</a></li>
+                    <li><a href="<?php echo base_url('jewelry'); ?>">Jewelry</a></li>
 
                     <li><a href="<?php echo base_url('watches'); ?>">Watches</a></li>
 
