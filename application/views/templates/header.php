@@ -8,11 +8,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<title>47th DDC; Diamonds, Gemstones, Jewelry, Watches and Art.</title>
+<title><?php echo (isset($page->seotitle) && !empty($page->seotitle))? $page->seotitle: '47th DDC; Diamonds, Gemstones, Jewelry, Watches and Art.'; ?></title>
 <link rel="shortcut icon" href="<?php echo base_url('assets/images/favicon.ico'); ?>" type="image/x-icon">
-<meta name="description" content="47DDC, buyers and sellers of fine jewelry, watches and art. We are authorized sellers of Jacob & Co & Motion Swiss watches as well as designers of rare jewelry. Visit us for all your loose & specialty cut gemstones, diamonds and personalized jewelry needs as well as rare watch accessories."/>
-<meta name="keywords" content="Diamond, Sapphire, Ruby, Emerald, Jewelry, Necklace, Vintage, Estate, Art Deco, Art Nouveau, 19th Century, Platinum, 18K, 14K, 22K, Edwardian, Victorian, Jacob & co, Rolex, Patek Philippe, Vacheron, David Webb, Cartier, Tiffany, Bracelet, Bangle, Ring, Earrings, Watches, Art, Antique Jewelry, Natural Pearls, Conch Pearls, Clam, Quahog, Scallop, Melo, Salt Water, Abalone, Blue Diamonds, Red Diamond, Pink Diamonds, Sotheby’s, Christies, Auctions, Japanese, eBay"/>
-
+<meta name="keywords" content="<?php echo (isset($page->keyword) && !empty($page->keyword))? $page->keyword: 'Diamond, Sapphire, Ruby, Emerald, Jewelry, Necklace, Vintage, Estate, Art Deco, Art Nouveau, 19th Century, Platinum, 18K, 14K, 22K, Edwardian, Victorian, Jacob & co, Rolex, Patek Philippe, Vacheron, David Webb, Cartier, Tiffany, Bracelet, Bangle, Ring, Earrings, Watches, Art, Antique Jewelry, Natural Pearls, Conch Pearls, Clam, Quahog, Scallop, Melo, Salt Water, Abalone, Blue Diamonds, Red Diamond, Pink Diamonds, Sotheby’s, Christies, Auctions, Japanese, eBay'; ?>"/>
+<meta name="description" content="<?php echo (isset($page->seodescription) && !empty($page->seodescription))? $page->seodescription: '47DDC, buyers and sellers of fine jewelry, watches and art. We are authorized sellers of Jacob & Co & Motion Swiss watches as well as designers of rare jewelry. Visit us for all your loose & specialty cut gemstones, diamonds and personalized jewelry needs as well as rare watch accessories.'; ?>"/>
 
 <!--Master css-->
 <link rel="stylesheet" href="<?php echo base_url('assets/css/master.css'); ?>">
@@ -75,11 +74,11 @@ New York, NY 10036</p>
     
                   <ul>
 
-                    <li><a href="<?php echo base_url('category/jewellery'); ?>">Jewellery</a></li>
+                    <li><a href="<?php echo base_url('jewellery'); ?>">Jewellery</a></li>
 
-                    <li><a href="<?php echo base_url('category/watches'); ?>">Watches</a></li>
+                    <li><a href="<?php echo base_url('watches'); ?>">Watches</a></li>
 
-                    <li><a href="<?php echo base_url('category/diamond'); ?>">Diamonds</a></li>
+                    <li><a href="<?php echo base_url('diamond'); ?>">Diamonds</a></li>
                     
 
                   </ul>
