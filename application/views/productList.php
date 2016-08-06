@@ -36,16 +36,15 @@
               </div>
             </div>
             <div class="row view-grid animated  fadeInUp" data-animation="fadeInUp" >
-
             <?php if(isset($subCategories) && !empty($subCategories)){
-                foreach($subCategories as $i => $row){ ?>
+                foreach($subCategories as $i => $row){ ?>            
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 ">
                       <div class="main_box">
                         <div class="box_1"> <img alt="alt"  width="259" height="200" src="<?php echo base_url('assets/media/product/'.$row->imagepath); ?>" draggable="false">
-                          <div class="overlay"> <a href="#" class="btn_c cart_btn_1">Add to cart</a> <a href="<?php echo base_url('#'); ?>" class="btn_c info_btn">More info</a> </div>
+                          <div class="overlay"> <a href="#" class="btn_c cart_btn_1">Add to cart</a> <a href="<?php echo base_url('/'.$page->eurl.'/'.$row->seurl.'/'.$row->eurl); ?>" class="btn_c info_btn">More info</a> </div>
                         </div>
                         <div class="desc">
-                          <h5><a href="#" title="<?php echo $row->title; ?>"><?php echo limit_content_length($row->title, 60); ?></a></h5>
+                          <h5><a href="<?php echo base_url('/'.$page->eurl.'/'.$row->seurl.'/'.$row->eurl); ?>" title="<?php echo $row->title; ?>"><?php echo limit_content_length($row->title, 60); ?></a></h5>
                           <p><?php echo $row->subcat; ?></p>
                           <div class="price">$<?php echo $row->price; ?></div>
                         </div>

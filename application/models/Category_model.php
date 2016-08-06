@@ -49,7 +49,7 @@ class Category_model extends CI_Model {
                 $where['s.catid'] = $catId;        
             }
 
-        	$this->db->select('*');
+        	$this->db->select('s.*, p.*, s.eurl as seurl');
         	$this->db->from('subcategory as s');
         	$this->db->join('product as p', 'p.subcatid = s.id', 'left');
             $this->db->where($where);
