@@ -44,120 +44,33 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
           <div class="desc_blk">
             <h5>description</h5>
             <div class="desc_blk_inn">
-
-<?php echo $product->description; ?>
-
-
+				<?php echo $product->description; ?>
             </div>
-            <div class="desc_blk_bot clearfix">
-              <div class="qty"> <a class="minus_btn" ></a>
-                <input type="text" placeholder="1" class="txtbox">
-                <a class="plus_btn" ></a> </div>
-              <div class="price">$120</div>
-              <a href="#" class="btn_c btn_c2">Add to cart</a> </div>
-            <div class="review_row clearfix">
-              <ul class="start_list">
-                <li class="fa fa-star active"></li>
-                <li class="fa fa-star active"></li>
-                <li class="fa fa-star active"></li>
-                <li class="fa fa-star active"></li>
-                <li class="fa fa-star"></li>
-              </ul>
-              <div class="total_rew">3 Review(s)</div>
-              <a href="#" class="add_rew">Add Your Review</a> <a href="#" class="share"><span class="fa fa-share-square-o"></span>Share</a> </div>
           </div>
         </div>
       </div>
       <div class="tabing animated  animation-done bounceInUp "  data-animation="bounceInUp">
         <ul class="nav nav-tabs">
-          <li class="active"><a href="#home" data-toggle="tab">customer reviews    2</a></li>
-          <li><a href="#information" data-toggle="tab">More INFORMATION</a></li>
-          <li><a href="#protags" data-toggle="tab">PRODUCT TAGS</a></li>
+          <li class="active"><a href="#information" data-toggle="tab">More INFORMATION</a></li>
         </ul>
         
         <!-- Tab panes -->
         <div class="tab-content">
-          <div class="tab-pane active" id="home">
+          <div class="tab-pane active" id="information">
             <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="rew_blk clearfix">
-                  <h5>Excellent </h5>
-                  <div class="top_row clearfix">
-                    <div class="date"><span class="fa fa-calendar"></span>1/3/2014</div>
-                    <a href="#" class="user"><span class="fa fa-user"></span>Sheldon</a>
-                    <ul class="start_list">
-                      <li class="fa fa-star active"></li>
-                      <li class="fa fa-star"></li>
-                      <li class="fa fa-star"></li>
-                      <li class="fa fa-star"></li>
-                      <li class="fa fa-star"></li>
-                    </ul>
-                  </div>
-                  <p>Etiam pretium, arcu id mattis aliquet, est neque sagittis quam, id mollis leo urna non dui. Phasellus lacinia facilisis ipsum, a tempor nibh. Aliquam nec interdum mi. Nunc laoreet molestie massa, at euismod ipsum fringilla id. Vivamus vehicula metus velit, sit amet congue turpis suscipit in. Etiam interdum felis sed consequat varius. Aliquam erat volutpat. </p>
-                </div>
-                <div class="rew_blk clearfix">
-                  <h5>Awesome!</h5>
-                  <div class="top_row clearfix">
-                    <div class="date"><span class="fa fa-calendar"></span>1/3/2014</div>
-                    <a href="#" class="user"><span class="fa fa-user"></span>Sasha</a>
-                    <ul class="start_list">
-                      <li class="fa fa-star active"></li>
-                      <li class="fa fa-star active"></li>
-                      <li class="fa fa-star active"></li>
-                      <li class="fa fa-star active"></li>
-                      <li class="fa fa-star"></li>
-                    </ul>
-                  </div>
-                  <p>Etiam pretium, arcu id mattis aliquet, est neque sagittis quam, id mollis leo urna non dui. Phasellus lacinia facilisis ipsum, a tempor nibh. Aliquam nec interdum mi. Nunc laoreet molestie massa, at euismod ipsum fringilla id. Vivamus vehicula metus velit, sit amet congue turpis suscipit in.</p>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="frm rew_frm">
-                  <h5>Write a review</h5>
-                  <form action="action.php">
-                    <div class="row first_row">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="lbltxt">Your Name: <span class="req">*</span></div>
-                        <input type="text" class="txtbox">
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="lbltxt">E-mail:<span class="req">*</span></div>
-                        <input type="text" class="txtbox">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="lbltxt">Theme:<span class="req">*</span></div>
-                        <input type="text" class="txtbox">
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="lbltxt">Rate on a scale:</div>
-                        <ul class="start_list">
-                          <li class="fa fa-star"></li>
-                          <li class="fa fa-star"></li>
-                          <li class="fa fa-star"></li>
-                          <li class="fa fa-star"></li>
-                          <li class="fa fa-star"></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="lbltxt">Message: <span class="req">*</span></div>
-                    <textarea ></textarea>
-                    <div class="clearfix frm_bot">
-                      <input type="submit" class="btn_c" value="Submit">
-                      <input type="reset" class="clear_btn" value="Clear">
-                      <span class="reqired">* Required Fields</span> </div>
-                  </form>
-                </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			  <?php foreach($pdetail as $i => $v){ ?>
+				<?php if(isset($v['en'])){ ?>
+					<div class="rew_blk clearfix">
+					  <h5><?php echo $i; ?></h5>
+					  <?php foreach($v['en'] as $ind => $val){
+						  echo '<p><strong>'.$ind.':</strong> '.$val.'</p>';
+					  } ?>
+					</div>					
+				<?php } ?>
+			  <?php } ?>
               </div>
             </div>
-          </div>
-          <div class="tab-pane" id="information">
-            <p>Etiam pretium, arcu id mattis aliquet, est neque sagittis quam, id mollis leo urna non dui. Phasellus lacinia facilisis ipsum, a tempor nibh. Aliquam nec interdum mi. Nunc laoreet molestie massa, at euismod ipsum fringilla id. Vivamus vehicula metus velit, sit amet congue turpis suscipit in. Etiam interdum felis sed consequat varius. Aliquam erat volutpat. </p>
-            <p>Etiam pretium, arcu id mattis aliquet, est neque sagittis quam, id mollis leo urna non dui. Phasellus lacinia facilisis ipsum, a tempor nibh. Aliquam nec interdum mi. Nunc laoreet molestie massa, at euismod ipsum fringilla id. Vivamus vehicula metus velit, sit amet congue turpis suscipit in. Etiam interdum felis sed consequat varius. Aliquam erat volutpat. </p>
-          </div>
-          <div class="tab-pane" id="protags">
-            <p>Etiam pretium, arcu id mattis aliquet, est neque sagittis quam, id mollis leo urna non dui. Phasellus lacinia facilisis ipsum, a tempor nibh. Aliquam nec interdum mi. Nunc laoreet molestie massa, at euismod ipsum fringilla id. Vivamus vehicula metus velit, sit amet congue turpis suscipit in. Etiam interdum felis sed consequat varius. Aliquam erat volutpat. </p>
           </div>
         </div>
       </div>
